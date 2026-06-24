@@ -895,37 +895,38 @@ export default function SurpriseDashboard({ completedBoxes, onSelectBox, onEnter
           .dashboard-desc { font-size: 16px; max-width: 90vw; }
 
           .boxes-grid {
-            grid-template-columns: 1fr;
-            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 12px;
           }
           .box-card-container:nth-child(3) {
-            grid-column: span 1;
+            grid-column: span 2;
+            justify-self: center;
           }
 
           .premium-giftbox {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
           }
           .box-body {
-            width: 135px;
-            height: 122px;
+            width: 125px;
+            height: 114px;
           }
           .box-lid {
-            width: 143px;
-            height: 30px;
+            width: 133px;
+            height: 28px;
             top: -5px;
           }
           .box-bow-container {
-            top: -30px;
-            left: calc(50% - 38px);
-            width: 76px;
-            height: 60px;
+            top: -26px;
+            left: calc(50% - 35px);
+            width: 70px;
+            height: 55px;
           }
-          .box-hanging-tag { top: 20px; }
-          .tag-card { width: 40px; height: 54px; }
-          .box-title-text { font-size: 18px; margin-top: 14px; }
-          .box-sub-text { font-size: 14px; }
-          .status-badge { font-size: 10px; padding: 3px 10px; }
+          .box-hanging-tag { top: 18px; }
+          .tag-card { width: 38px; height: 50px; }
+          .box-title-text { font-size: 17px; margin-top: 12px; }
+          .box-sub-text { font-size: 13px; }
+          .status-badge { font-size: 9.5px; padding: 3px 8px; }
           .garden-btn { font-size: 13px; padding: 14px 28px; }
 
           .deco-polaroid, .deco-torn-note, .deco-left-bouquet,
@@ -937,17 +938,27 @@ export default function SurpriseDashboard({ completedBoxes, onSelectBox, onEnter
         @media (max-width: 400px) {
           .dashboard-title { font-size: 26px; }
           .premium-giftbox {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
           }
           .box-body {
-            width: 118px;
-            height: 108px;
+            width: 110px;
+            height: 100px;
           }
           .box-lid {
-            width: 126px;
-            height: 26px;
+            width: 118px;
+            height: 24px;
           }
+          .box-bow-container {
+            top: -22px;
+            left: calc(50% - 30px);
+            width: 60px;
+            height: 48px;
+          }
+          .box-hanging-tag { top: 14px; }
+          .tag-card { width: 34px; height: 44px; }
+          .box-title-text { font-size: 15px; margin-top: 10px; }
+          .box-sub-text { font-size: 12px; }
         }
       `}</style>
 

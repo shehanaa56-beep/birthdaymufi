@@ -443,16 +443,16 @@ export default function CelebrationBox({ onBack, onComplete, onOpenGift }) {
             transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.4 }}
             className="glass-panel gift-reveal-card"
           >
-            <div className="gift-reveal-hint">and one last thing...</div>
+            <div className="gift-reveal-hint">Patticheee... 😜</div>
             <h2 className="gift-reveal-title">
-              Open Your Gift <span role="img" aria-label="ribbon">🎀</span>
+              Gotcha! <span role="img" aria-label="prank">🤪</span>
             </h2>
             <p className="gift-reveal-desc">
-              A little something waits beyond the boxes. The garden is open.
+              Did you really think it was going to be that simple? Just kidding! Your real surprise is waiting.
             </p>
 
             <button className="garden-btn" onClick={handleOpenGift}>
-              ✦ OPEN YOUR GIFT ✦
+              ✦ OPEN YOUR REAL GIFT ✦
             </button>
 
             <div>
