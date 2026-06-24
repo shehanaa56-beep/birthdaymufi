@@ -85,7 +85,7 @@ export default function LetterBox({ onBack, onComplete }) {
           background: rgba(255, 255, 255, 0.4);
           border: 1px solid rgba(255, 255, 255, 0.6);
           border-radius: 12px;
-          box-shadow: 0 16px 36px rgba(111, 184, 184, 0.08);
+          box-shadow: 0 16px 36px rgba(230, 161, 21, 0.08);
           perspective: 1000px;
           cursor: pointer;
           display: flex;
@@ -116,7 +116,7 @@ export default function LetterBox({ onBack, onComplete }) {
           height: 0;
           border-left: 220px solid transparent;
           border-right: 220px solid transparent;
-          border-bottom: 150px solid rgba(232, 242, 239, 0.85);
+          border-bottom: 150px solid rgba(253, 248, 225, 0.85);
           z-index: 3;
         }
 
@@ -129,7 +129,7 @@ export default function LetterBox({ onBack, onComplete }) {
           height: 0;
           border-top: 140px solid transparent;
           border-bottom: 140px solid transparent;
-          border-left: 230px solid rgba(207, 232, 225, 0.5);
+          border-left: 230px solid rgba(248, 231, 165, 0.5);
           z-index: 2;
         }
 
@@ -141,7 +141,7 @@ export default function LetterBox({ onBack, onComplete }) {
           height: 0;
           border-top: 140px solid transparent;
           border-bottom: 140px solid transparent;
-          border-right: 230px solid rgba(207, 232, 225, 0.55);
+          border-right: 230px solid rgba(248, 231, 165, 0.55);
           z-index: 2;
         }
 
@@ -154,7 +154,7 @@ export default function LetterBox({ onBack, onComplete }) {
           height: 0;
           border-left: 220px solid transparent;
           border-right: 220px solid transparent;
-          border-top: 150px solid rgba(232, 242, 239, 0.95);
+          border-top: 150px solid rgba(253, 248, 225, 0.95);
           transform-origin: top center;
           z-index: 4;
           transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -175,7 +175,7 @@ export default function LetterBox({ onBack, onComplete }) {
           background: var(--mint-blue);
           border-radius: 50%;
           border: 2px dashed rgba(255,255,255,0.4);
-          box-shadow: 0 4px 10px rgba(111, 184, 184, 0.3);
+          box-shadow: 0 4px 10px rgba(230, 161, 21, 0.3);
           z-index: 10;
           display: flex;
           align-items: center;
@@ -215,13 +215,13 @@ export default function LetterBox({ onBack, onComplete }) {
         .letter-paper {
           width: 100%;
           max-width: 500px;
-          background: #D9EFE9; /* custom light mint */
+          background: #FFFBE6; /* Custom warm creamy gold/yellow theme */
           background-image: 
-            linear-gradient(rgba(111, 184, 184, 0.15) 1px, transparent 1px);
+            linear-gradient(rgba(230, 161, 21, 0.12) 1px, transparent 1px);
           background-size: 100% 28px;
           border-radius: 16px;
           padding: 40px 35px;
-          box-shadow: 0 16px 40px rgba(49, 68, 74, 0.15);
+          box-shadow: 0 16px 40px rgba(72, 47, 24, 0.15);
           position: relative;
           z-index: 12;
           border: 1px solid rgba(255, 255, 255, 0.4);
@@ -268,14 +268,14 @@ export default function LetterBox({ onBack, onComplete }) {
           border-radius: 50px;
           border: none;
           cursor: pointer;
-          box-shadow: 0 4px 15px rgba(111, 184, 184, 0.2);
+          box-shadow: 0 4px 15px rgba(230, 161, 21, 0.2);
           transition: all 0.3s ease;
         }
 
         .return-btn:hover {
-          background-color: #5AA1A1;
+          background-color: #D98A0F;
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(111, 184, 184, 0.3);
+          box-shadow: 0 6px 20px rgba(230, 161, 21, 0.3);
         }
 
         /* Falling letter petals */
@@ -410,30 +410,27 @@ export default function LetterBox({ onBack, onComplete }) {
           >
             {/* Ruled lines and message */}
             <div className="letter-content">
-              <div className="letter-salutation">To my Dearest Megh,</div>
-              <div className="letter-paragraph">
-                I’m sorry I’m late.<br/>
-                I forgot the date, but I could never forget you.
-              </div>
+              <div className="letter-salutation">Dear Muff❤️,</div>
               <div className="letter-paragraph">
                 Our friendship isn’t about daily calls or texts.<br/>
                 It was made in our 12th standard days — sharing lunch, secrets, and endless laughs in school.<br/>
                 Those moments still feel fresh, even after all this time.
               </div>
               <div className="letter-paragraph">
-                We don’t talk every day, but when we do, it feels like nothing has changed. That’s how strong our bond is.
+                You’ve been with me since then, and you’ve never changed.<br/>
+                You’re the one I can share all my secrets with.<br/>
+                The one who makes me feel comfortable when I’m not okay.
               </div>
               <div className="letter-paragraph">
-                So today, even though I’m late, I’m celebrating you.<br/>
-                The girl who stood by me in school, and the amazing woman you are now.<br/>
-                I wish this year gives you all the love and happiness.
+                We don’t chat every day, but our friendship has always stayed the same. That’s how I know it’s real.
               </div>
               <div className="letter-paragraph" style={{ fontWeight: 'bold' }}>
-                Belated birthday wishes Meghoose🩵
+                I love you to the moon and back.<br/>
+                Please stay the same — always and forever.
               </div>
               <div className="letter-signoff">
                 With love,<br />
-                <span className="signoff-name" style={{ fontFamily: 'var(--font-hand)', fontSize: '24px' }}>Your Anjala</span>
+                <span className="signoff-name" style={{ fontFamily: 'var(--font-hand)', fontSize: '24px' }}>Anju ❤️</span>
               </div>
             </div>
 
@@ -461,7 +458,7 @@ export default function LetterBox({ onBack, onComplete }) {
                 }}
                 style={{
                   background: 'rgba(255, 255, 255, 0.65)',
-                  boxShadow: '0 1px 2px rgba(111,184,184,0.1)',
+                  boxShadow: '0 1px 2px rgba(230,161,21,0.1)',
                 }}
               />
             ))}

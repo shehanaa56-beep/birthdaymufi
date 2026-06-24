@@ -897,7 +897,7 @@ export default function PasscodeScreen({ onSuccess }) {
           {/* Dash-bordered Hint Box */}
           <div className="dashed-hint-box">
             <span>🌻</span>
-            hint: a year that started everything
+            hint: a year that started everythingg
             <span>🌻</span>
           </div>
         </motion.div>

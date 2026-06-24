@@ -93,10 +93,10 @@ const BabysBreathBranch = ({ style }) => (
     <path d="M50 110 C48 80 30 60 20 40" stroke="#BFD8D2" strokeWidth="1.5" strokeLinecap="round" fill="none" />
     <path d="M50 110 C52 75 70 55 80 35" stroke="#BFD8D2" strokeWidth="1.5" strokeLinecap="round" fill="none" />
     <path d="M50 110 C50 60 55 45 60 20" stroke="#BFD8D2" strokeWidth="1.2" strokeLinecap="round" fill="none" />
-    
+
     <path d="M35 70 C28 60 25 55 15 50" stroke="#BFD8D2" strokeWidth="1" fill="none" />
     <path d="M62 70 C70 60 75 55 85 50" stroke="#BFD8D2" strokeWidth="1" fill="none" />
-    
+
     {/* White buds */}
     <circle cx="20" cy="40" r="3.5" fill="#FFFFFF" stroke="#E9EEF0" strokeWidth="0.5" />
     <circle cx="20" cy="40" r="1" fill="#FFEAA0" />
@@ -329,8 +329,8 @@ const PearlString = ({ style }) => (
     <path d="M 10 5 Q 50 18 90 5" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="0.5" />
     {Array.from({ length: 9 }).map((_, i) => {
       const t = (i + 1) / 10;
-      const x = (1-t)*(1-t)*10 + 2*(1-t)*t*50 + t*t*90;
-      const y = (1-t)*(1-t)*5 + 2*(1-t)*t*18 + t*t*5;
+      const x = (1 - t) * (1 - t) * 10 + 2 * (1 - t) * t * 50 + t * t * 90;
+      const y = (1 - t) * (1 - t) * 5 + 2 * (1 - t) * t * 18 + t * t * 5;
       return (
         <g key={i} transform={`translate(${x}, ${y})`}>
           <circle cx="0" cy="0" r="2.8" fill="url(#pearl-grad-small)" />
@@ -488,7 +488,8 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
   const memories = [
     {
       id: '01',
-      title: 'My Favorite Memory',
+      title: 'Pachakkili',
+      subtitle: 'My green forest ☘️',
       image: '/images/m2.jpeg',
       rotation: -3,
       styleClass: 'mint',
@@ -504,8 +505,9 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
     },
     {
       id: '02',
-      title: 'Our Funniest Moment',
-      image: '/images/m3.jpeg',
+      title: 'Pretty',
+      subtitle: 'Blooming beauty🌸',
+      image: '/images/m1.jpeg',
       rotation: 2,
       styleClass: 'eggshell',
       decorations: (
@@ -520,7 +522,8 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
     },
     {
       id: '03',
-      title: 'The Day We Met',
+      title: 'Too glam to handle',
+      subtitle: 'Desi edition',
       image: '/images/m4.jpeg',
       rotation: -2,
       styleClass: 'sage',
@@ -535,8 +538,9 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
     },
     {
       id: '04',
-      title: 'Forever Best Friends',
-      image: '/images/m5.jpeg',
+      title: '💙',
+      subtitle: 'You are my blue',
+      image: '/images/m3.jpeg',
       rotation: 3,
       styleClass: 'white',
       decorations: (
@@ -551,8 +555,9 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
     },
     {
       id: '05',
-      title: 'You Make Life Beautiful',
-      image: '/images/m1.jpeg',
+      title: '😉',
+      subtitle: 'Cryptic girl',
+      image: '/images/m5.jpeg',
       rotation: -1,
       styleClass: 'silver',
       decorations: (
@@ -561,6 +566,67 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           <Daisy style={{ bottom: '-20px', left: '-15px', transform: 'scale(1.1)' }} />
           <PearlString style={{ bottom: '-12px', right: '10px' }} />
           <PearlAccent style={{ top: '8px', left: '8px' }} />
+          <PearlAccent style={{ top: '8px', right: '8px' }} />
+        </>
+      )
+    },
+    {
+      id: '06',
+      title: 'Our Happy Place',
+      subtitle: 'Pure joy 💛',
+      image: '/images/m6.jpeg',
+      rotation: 3,
+      styleClass: 'mint',
+      decorations: (
+        <>
+          <MiniBowSticker style={{ top: '-12px', right: '-15px', transform: 'rotate(15deg)' }} />
+          <Daisy style={{ bottom: '-20px', right: '-15px', transform: 'scale(0.95)' }} />
+          <PearlAccent style={{ top: '8px', left: '8px' }} />
+          <PearlAccent style={{ top: '8px', right: '8px' }} />
+        </>
+      )
+    },
+    {
+      id: '07',
+      title: 'Together is Better',
+      subtitle: 'Infinite laughs ☀️',
+      image: '/images/m7.jpeg',
+      rotation: -2,
+      styleClass: 'eggshell',
+      decorations: (
+        <>
+          <WashiTape style={{ top: '-10px', left: '-15px', transform: 'rotate(-15deg)' }} />
+          <ForgetMeNot style={{ bottom: '-15px', left: '15px' }} />
+          <PearlAccent style={{ bottom: '8px', right: '8px' }} />
+        </>
+      )
+    },
+    {
+      id: '08',
+      title: 'Chasing Sunsets',
+      subtitle: 'Golden memories ✨',
+      image: '/images/m8.jpeg',
+      rotation: 2,
+      styleClass: 'sage',
+      decorations: (
+        <>
+          <FlappingButterfly style={{ top: '25%', right: '-18px' }} delay="0.8s" />
+          <PearlString style={{ bottom: '-12px', left: '10px' }} />
+          <PearlAccent style={{ top: '8px', left: '8px' }} />
+        </>
+      )
+    },
+    {
+      id: '09',
+      title: 'Best Day Ever',
+      subtitle: 'Side by side, always 🧸',
+      image: '/images/m9.jpeg',
+      rotation: -3,
+      styleClass: 'silver',
+      decorations: (
+        <>
+          <TeddyBearSticker style={{ top: '-22px', left: '-20px', transform: 'rotate(-10deg)' }} />
+          <WashiTape style={{ bottom: '-10px', right: '-15px', transform: 'rotate(25deg)' }} />
           <PearlAccent style={{ top: '8px', right: '8px' }} />
         </>
       )
@@ -594,6 +660,8 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           min-height: 80vh;
           position: relative;
           z-index: 10;
+          padding: 0 16px;
+          box-sizing: border-box;
         }
 
         .back-link {
@@ -671,6 +739,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           z-index: 2;
           overflow: hidden;
           margin-bottom: 50px;
+          box-sizing: border-box;
         }
 
         .lace-border-top {
@@ -742,6 +811,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           width: 100%;
           max-width: 245px;
           margin: 0 auto;
+          box-sizing: border-box;
         }
 
         .scrapbook-paper-frame::before {
@@ -817,7 +887,7 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           opacity: 0.55;
           margin-top: 4px;
           font-weight: 600;
-          text-transform: uppercase;
+          text-transform: none;
         }
 
         .return-btn-container {
@@ -916,17 +986,49 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
         }
 
         @media (max-width: 860px) {
+          .memory-lane-container { padding: 0 12px; }
           .memory-title { font-size: 36px; }
-          .scrapbook-board { padding: 35px 20px; }
-          .scrapbook-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px 20px; }
+          .scrapbook-board { padding: 35px 20px; border-radius: 20px; }
+          .scrapbook-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 35px 20px;
+          }
           .grid-arrow-cell { display: none !important; }
+          .scrapbook-paper-frame { max-width: 100%; }
         }
 
         @media (max-width: 520px) {
-          .memory-title { font-size: 28px; }
-          .back-link { font-size: 18px; margin-bottom: 20px; }
-          .memory-desc { font-size: 13.5px; }
-          .scrapbook-grid { grid-template-columns: 1fr; gap: 40px; }
+          .memory-lane-container { padding: 0 8px; }
+          .memory-header { margin-bottom: 24px; }
+          .memory-intro-hint { font-size: 18px; }
+          .memory-title { font-size: 26px; margin-bottom: 6px; }
+          .back-link { font-size: 16px; margin-bottom: 18px; }
+          .memory-desc { font-size: 13px; max-width: 92vw; }
+          .scrapbook-board {
+            padding: 28px 12px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+          }
+          .scrapbook-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px 14px;
+          }
+          .grid-arrow-cell { display: none !important; }
+          .scrapbook-paper-frame {
+            max-width: 100%;
+            padding: 10px 10px 20px 10px;
+          }
+          .paper-caption-main { font-size: 16px; margin-top: 10px; }
+          .paper-caption-sub { font-size: 9px; }
+          .return-btn-container { margin-bottom: 24px; }
+        }
+
+        @media (max-width: 360px) {
+          .scrapbook-grid {
+            grid-template-columns: 1fr;
+            gap: 36px;
+          }
+          .scrapbook-paper-frame { max-width: 220px; }
         }
       `}</style>
 
@@ -952,7 +1054,8 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
         <ScrapbookParticles />
 
         <div className="scrapbook-grid">
-          {memories.map((m, idx) => (
+          {/* Row 1 */}
+          {memories.slice(0, 3).map((m) => (
             <div key={m.id} className="grid-cell" style={{ position: 'relative' }}>
               <motion.div
                 className={`scrapbook-paper-frame ${m.styleClass}`}
@@ -971,24 +1074,70 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
                   <div className="paper-id-tag">{m.id}</div>
                 </div>
                 <div className="paper-caption-main">{m.title}</div>
-                <div className="paper-caption-sub">forever yours</div>
+                <div className="paper-caption-sub">{m.subtitle}</div>
               </motion.div>
             </div>
           ))}
 
-          {/* Row 2 connecting Arrows */}
+          {/* Row 2 (Connecting Arrows) */}
           <div className="grid-arrow-cell"><CuteArrow /></div>
           <div className="grid-arrow-cell"><CuteArrow /></div>
           <div className="grid-arrow-cell"><CuteArrow /></div>
-          
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
-          <div className="grid-cell"></div>
 
-          {/* Bottom row arrows */}
+          {/* Row 3 */}
+          {memories.slice(3, 6).map((m) => (
+            <div key={m.id} className="grid-cell" style={{ position: 'relative' }}>
+              <motion.div
+                className={`scrapbook-paper-frame ${m.styleClass}`}
+                style={{ rotate: m.rotation }}
+                whileHover={{
+                  rotate: 0,
+                  scale: 1.04,
+                  y: -8,
+                  boxShadow: '0 22px 50px rgba(49, 68, 74, 0.18)',
+                  zIndex: 20,
+                }}
+              >
+                {m.decorations}
+                <div className="paper-inner-img-wrapper">
+                  <img src={m.image} alt={m.title} className="paper-img" />
+                  <div className="paper-id-tag">{m.id}</div>
+                </div>
+                <div className="paper-caption-main">{m.title}</div>
+                <div className="paper-caption-sub">{m.subtitle}</div>
+              </motion.div>
+            </div>
+          ))}
+
+          {/* Row 4 (Connecting Arrows) */}
           <div className="grid-arrow-cell"><CuteArrow /></div>
-          <div className="grid-arrow-cell"></div>
-          <div className="grid-arrow-cell"></div>
+          <div className="grid-arrow-cell"><CuteArrow /></div>
+          <div className="grid-arrow-cell"><CuteArrow /></div>
+
+          {/* Row 5 */}
+          {memories.slice(6, 9).map((m) => (
+            <div key={m.id} className="grid-cell" style={{ position: 'relative' }}>
+              <motion.div
+                className={`scrapbook-paper-frame ${m.styleClass}`}
+                style={{ rotate: m.rotation }}
+                whileHover={{
+                  rotate: 0,
+                  scale: 1.04,
+                  y: -8,
+                  boxShadow: '0 22px 50px rgba(49, 68, 74, 0.18)',
+                  zIndex: 20,
+                }}
+              >
+                {m.decorations}
+                <div className="paper-inner-img-wrapper">
+                  <img src={m.image} alt={m.title} className="paper-img" />
+                  <div className="paper-id-tag">{m.id}</div>
+                </div>
+                <div className="paper-caption-main">{m.title}</div>
+                <div className="paper-caption-sub">{m.subtitle}</div>
+              </motion.div>
+            </div>
+          ))}
         </div>
       </div>
 

@@ -360,6 +360,8 @@ export default function SurpriseDashboard({ completedBoxes, onSelectBox, onEnter
           min-height: 85vh;
           position: relative;
           z-index: 10;
+          padding: 0 16px;
+          box-sizing: border-box;
         }
 
         .dashboard-header {
@@ -515,6 +517,7 @@ export default function SurpriseDashboard({ completedBoxes, onSelectBox, onEnter
           align-items: center;
           justify-content: center;
           perspective: 600px;
+          flex-shrink: 0;
         }
 
         .box-body {
@@ -849,6 +852,7 @@ export default function SurpriseDashboard({ completedBoxes, onSelectBox, onEnter
 
         /* Responsive Design */
         @media (max-width: 980px) {
+          .dashboard-container { padding: 0 20px; }
           .boxes-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 25px;
@@ -883,26 +887,66 @@ export default function SurpriseDashboard({ completedBoxes, onSelectBox, onEnter
           }
         }
 
-        @media (max-width: 580px) {
-          .dashboard-title {
-            font-size: 38px;
-          }
-
-          .dashboard-desc {
-            font-size: 16px;
-          }
+        @media (max-width: 640px) {
+          .dashboard-container { padding: 0 12px; }
+          .dashboard-header { margin-bottom: 28px; }
+          .dashboard-intro-hint { font-size: 20px; }
+          .dashboard-title { font-size: 32px; }
+          .dashboard-desc { font-size: 16px; max-width: 90vw; }
 
           .boxes-grid {
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 24px;
           }
-
           .box-card-container:nth-child(3) {
             grid-column: span 1;
           }
 
-          .deco-polaroid, .deco-torn-note, .deco-left-bouquet, .deco-right-bouquet {
+          .premium-giftbox {
+            width: 160px;
+            height: 160px;
+          }
+          .box-body {
+            width: 135px;
+            height: 122px;
+          }
+          .box-lid {
+            width: 143px;
+            height: 30px;
+            top: -5px;
+          }
+          .box-bow-container {
+            top: -30px;
+            left: calc(50% - 38px);
+            width: 76px;
+            height: 60px;
+          }
+          .box-hanging-tag { top: 20px; }
+          .tag-card { width: 40px; height: 54px; }
+          .box-title-text { font-size: 18px; margin-top: 14px; }
+          .box-sub-text { font-size: 14px; }
+          .status-badge { font-size: 10px; padding: 3px 10px; }
+          .garden-btn { font-size: 13px; padding: 14px 28px; }
+
+          .deco-polaroid, .deco-torn-note, .deco-left-bouquet,
+          .deco-right-bouquet, .deco-butterfly {
             display: none !important;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .dashboard-title { font-size: 26px; }
+          .premium-giftbox {
+            width: 140px;
+            height: 140px;
+          }
+          .box-body {
+            width: 118px;
+            height: 108px;
+          }
+          .box-lid {
+            width: 126px;
+            height: 26px;
           }
         }
       `}</style>
