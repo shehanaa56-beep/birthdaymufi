@@ -340,7 +340,7 @@ export default function PasscodeScreen({ onSuccess }) {
   const [code, setCode] = useState('');
   const [isError, setIsError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const correctCode = '2017';
+  const correctCode = '1011';
 
   const handleKeyPress = (num) => {
     if (isSuccess) return;
@@ -804,7 +804,7 @@ export default function PasscodeScreen({ onSuccess }) {
           <ScallopedTag />
 
           <div className="polaroid-caption">
-            Happy Birthday <span style={{ color: 'var(--mint-blue)' }}>🌻</span>
+            my dearest girl <span style={{ color: 'var(--mint-blue)' }}>🌻</span>
           </div>
         </motion.div>
       </div>
@@ -897,7 +897,7 @@ export default function PasscodeScreen({ onSuccess }) {
           {/* Dash-bordered Hint Box */}
           <div className="dashed-hint-box">
             <span>🌻</span>
-            hint: a year that started everythingg
+            hint: the day i met your soulmate
             <span>🌻</span>
           </div>
         </motion.div>

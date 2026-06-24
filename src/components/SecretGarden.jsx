@@ -237,7 +237,7 @@ export default function SecretGarden({ onBack }) {
         animate={{ opacity: 0.85 }}
         transition={{ duration: 1, delay: 0.9 }}
       >
-        happy birthday, always 🖤
+        my dearest girl, always 🖤
       </motion.div>
 
       {/* Back Button */}

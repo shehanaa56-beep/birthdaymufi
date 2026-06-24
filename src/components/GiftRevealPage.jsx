@@ -258,9 +258,9 @@ export default function GiftRevealPage({ onNext }) {
       >
         <div className="happy-text">
           <div className="happy-line"></div>
-          Happy
+          my dearest
         </div>
-        <div className="birthday-text">BIRTHDAY</div>
+        <div className="birthday-text">GIRL</div>
       </motion.div>
 
       {/* Decorative Elements */}

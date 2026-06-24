@@ -796,10 +796,8 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
         }
 
         .scrapbook-paper-frame {
-          background-color: var(--white);
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.08' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='%23ffffff'/%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)' opacity='0.07'/%3E%3C/svg%3E");
+          background: transparent !important;
           padding: 14px 14px 28px 14px;
-          filter: url(#torn-paper-filter) drop-shadow(0 10px 22px rgba(49, 68, 74, 0.12));
           border-radius: 6px;
           position: relative;
           display: flex;
@@ -814,11 +812,29 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
           box-sizing: border-box;
         }
 
+        /* Torn-paper filter is isolated here so it doesn't warp children (photos/text/faces) */
+        .scrapbook-paper-frame::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-color: var(--white);
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.08' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='%23ffffff'/%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)' opacity='0.07'/%3E%3C/svg%3E");
+          filter: url(#torn-paper-filter) drop-shadow(0 10px 22px rgba(49, 68, 74, 0.12));
+          border-radius: 6px;
+          z-index: -1;
+          pointer-events: none;
+          transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .scrapbook-paper-frame:hover::after {
+          filter: url(#torn-paper-filter) drop-shadow(0 18px 32px rgba(49, 68, 74, 0.18));
+        }
+
         .scrapbook-paper-frame::before {
           content: '';
           position: absolute;
           inset: 0;
-          z-index: -1;
+          z-index: -2;
           transform: rotate(-3deg) scale(0.99);
           filter: url(#torn-paper-filter) drop-shadow(0 2px 6px rgba(0,0,0,0.05));
           transition: all 0.4s ease;
