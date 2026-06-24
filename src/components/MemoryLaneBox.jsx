@@ -999,36 +999,36 @@ export default function MemoryLaneBox({ onBack, onComplete }) {
 
         @media (max-width: 520px) {
           .memory-lane-container { padding: 0 8px; }
-          .memory-header { margin-bottom: 24px; }
+          .memory-header { margin-bottom: 20px; }
           .memory-intro-hint { font-size: 18px; }
           .memory-title { font-size: 26px; margin-bottom: 6px; }
           .back-link { font-size: 16px; margin-bottom: 18px; }
           .memory-desc { font-size: 13px; max-width: 92vw; }
           .scrapbook-board {
-            padding: 28px 12px;
+            padding: 20px 8px;
             border-radius: 16px;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
           }
           .scrapbook-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 28px 14px;
+            gap: 22px 10px;
           }
           .grid-arrow-cell { display: none !important; }
           .scrapbook-paper-frame {
             max-width: 100%;
-            padding: 10px 10px 20px 10px;
+            padding: 10px 8px 18px 8px;
           }
-          .paper-caption-main { font-size: 16px; margin-top: 10px; }
-          .paper-caption-sub { font-size: 9px; }
-          .return-btn-container { margin-bottom: 24px; }
-        }
-
-        @media (max-width: 360px) {
-          .scrapbook-grid {
-            grid-template-columns: 1fr;
-            gap: 36px;
+          .paper-caption-main { font-size: 13.5px; margin-top: 8px; }
+          .paper-caption-sub { font-size: 8.5px; margin-top: 2px; }
+          .return-btn-container { margin-bottom: 20px; }
+          
+          /* Scale down stickers and ornaments to fit smaller polaroid frames */
+          .scrapbook-paper-frame svg,
+          .scrapbook-paper-frame .washi-tape-sticker,
+          .scrapbook-paper-frame .flapping-butterfly-wrapper,
+          .scrapbook-paper-frame .pearl-accent {
+            zoom: 0.72;
           }
-          .scrapbook-paper-frame { max-width: 220px; }
         }
       `}</style>
 
